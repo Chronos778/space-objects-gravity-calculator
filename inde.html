@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gravitational Force Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Gravitational Force / Acceleration Calculator</h1>
+
+        <div class="form-container">
+            <!-- Space object selection -->
+            <label for="object">Choose a space object (Sun, Earth, etc.):</label>
+            <select id="object">
+                <option value="earth">Earth</option>
+                <option value="sun">Sun</option>
+                <option value="mars">Mars</option>
+                <option value="jupiter">Jupiter</option>
+                <option value="moon">Moon</option>
+                <option value="star">Generic Star</option>
+            </select>
+
+            <!-- Mass unit selection -->
+            <label for="mass-unit">Choose mass unit:</label>
+            <div>
+                <input type="radio" id="kg" name="mass-unit" value="kg" checked>
+                <label for="kg">Kg</label>
+            </div>
+            <div>
+                <input type="radio" id="solarMass" name="mass-unit" value="solarMass">
+                <label for="solarMass">Solar Mass (M☉)</label>
+            </div>
+
+            <!-- Mass input -->
+            <label for="mass">Enter your mass:</label>
+            <input type="number" id="mass" placeholder="Enter mass (kg or solar masses)" required>
+
+            <!-- Distance input -->
+            <label for="distance">Enter the distance from the center (in meters):</label>
+            <input type="number" id="distance" placeholder="Enter distance (m)" required>
+
+            <!-- Calculate button -->
+            <button onclick="calculateGravitationalForce()">Calculate Gravitational Force</button>
+
+            <!-- Result display -->
+            <div class="result" id="result"></div>
+        </div>
+    </div>
+
+    <script src="scrip.js"></script>
+</body>
+</html>
